@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Tic-Tac-Toe</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="/static/stylesheets/ttt.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="/static/js/main.js"></script>
+<script src="/static/js/TicTacToeGame.js"></script>
+<script src="/static/js/TicTacToeController.js"></script>
+</head>
+<body>
+  <header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
+    <div class="container">
+      <div class="navbar-header">
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="/" class="navbar-brand">Tic-Tac-Toe</a>
+      </div>
+      <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+        <ul class="nav navbar-nav">
+          <button id="new-game" type="button" class="btn navbar-btn btn-sm btn-info">New Game</button>
+          <button id="reset-stats" type="button" class="btn navbar-btn btn-sm btn-danger">Reset Stats</button>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <button id="fake-win" type="button" class="btn navbar-btn btn-sm btn-success">Fake win</button>
+          <button id="fake-loss" type="button" class="btn navbar-btn btn-sm btn-danger">Fake loss</button>
+          <button id="fake-tie" type="button" class="btn btn-default navbar-btn btn-sm">Fake tie</button>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="board">
+    <button type="button" class="btn btn-default"></button>
+    <button type="button" class="btn btn-default"></button>
+    <button type="button" class="btn btn-default"></button>
+    <button type="button" class="btn btn-default"></button>
+    <button type="button" class="btn btn-default"></button>
+    <button type="button" class="btn btn-default"></button>
+    <button type="button" class="btn btn-default"></button>
+    <button type="button" class="btn btn-default"></button>
+    <button type="button" class="btn btn-default"></button>
+    <h1 class="left-text">Your turn</h1>
+    <h1 class="right-text"><span id="wins">{{ wins }}</span>-<span id="losses">{{ losses }}</span>-<span id="ties">{{ ties }}</span></h1>
+  </div>
+</body>
+</html>
